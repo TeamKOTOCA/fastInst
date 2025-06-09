@@ -1,0 +1,16 @@
+﻿<Page x:Class="fastInst.progres"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:fastInst"
+      mc:Ignorable="d" 
+      d:DesignHeight="185" d:DesignWidth="580"
+      Title="progres">
+
+    <Grid>
+        <ProgressBar x:Name="progress" HorizontalAlignment="Center" Minimum="0" Maximum="100" Height="36" Margin="0,92,0,0" VerticalAlignment="Top" Width="560"/>
+        <Label x:Name="statusmsg" Content="プログラムファイルをダウンロード中" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top" Height="22" Width="386"/>
+
+    </Grid>
+</Page>

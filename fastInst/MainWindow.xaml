@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:fastInst"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Fastinst - インストーラー" Height="300" Width="600">
     <Grid>
+        <Label x:Name="titlelabel" Content="fastinst インストールウィザード" Height="40" Margin="20,10,20,0" VerticalAlignment="Top"/>
+        <Button x:Name="Cancelbtn" Content="キャンセル" Margin="20,0,0,14" Click="Cancel" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="270"/>
+        <Button x:Name="Gobtn" Content="次へ" Margin="0,0,20,14" Click="Button_Click" HorizontalAlignment="Right" Width="270" Height="30" VerticalAlignment="Bottom"/>
+        <Frame x:Name="Mainframe" NavigationUIVisibility="Hidden" HorizontalAlignment="Left" Height="185" VerticalAlignment="Center" Width="580" Margin="10,0,0,0"/>
 
     </Grid>
 </Window>
