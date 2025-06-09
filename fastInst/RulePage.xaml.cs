@@ -1,4 +1,5 @@
-﻿using System.Net.Http;
+﻿using Markdig;
+using System.Net.Http;
 using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
@@ -35,6 +36,11 @@ namespace fastInst
                 {
                     string downloadUrl = asset.GetProperty("browser_download_url").GetString();
                     string markdown = await client.GetStringAsync(downloadUrl);
+
+                    string html = Markdown.ToHtml(markdown);
+                    string wrappedHtml = $"<html><head><meta charset=\"UTF-8\"></head><body>{html}</body></html>";
+
+                    MarkdownBrowser.NavigateToString(wrappedHtml);
 
                     break;
                 }

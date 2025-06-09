@@ -49,11 +49,13 @@ namespace fastInst
                 statusmsg.Content += asset.GetProperty("name").GetString();
                 if (asset.GetProperty("name").GetString() == mainWindow.ProgramFileName)
                 {
+                    statusmsg.Content += "\n プログラムファイルをインストールしてます";
                     string downloadUrl = asset.GetProperty("browser_download_url").GetString();
                     byte[] fileBytes = await client.GetByteArrayAsync(downloadUrl);
                     string folder = @"C:\Program Files\" + mainWindow.GithubRepoName;
                     string fullPath = System.IO.Path.Combine(folder, mainWindow.ProgramFileName);
                     Directory.CreateDirectory(folder);
+                    statusmsg.Content = "はぁ";
                     await File.WriteAllBytesAsync(fullPath, fileBytes);
                     progress.Value = 60;
                     statusmsg.Content = "起動ファイルなどを構成中";

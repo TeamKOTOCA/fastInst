@@ -16,9 +16,9 @@ namespace fastInst
             //GitHubのユーザー名
             public string GithubUser = "teamKOTOCA";
             //GitHubのリポジトリの名前。
-            public string GithubRepoName = "fastinst";
+            public string GithubRepoName = "PortaPad";
             //引っ張ってくるexeファイルの名前。「.exe」まで含める。一言一句正確にかくこと。
-            public string ProgramFileName = "fastInst.exe";
+            public string ProgramFileName = "PortaPad.exe";
             //サービスとして設定するかどうか
             public bool SetForService = true;
 
