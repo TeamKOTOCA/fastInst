@@ -21,6 +21,7 @@ namespace fastInst
             public string ProgramFileName = "PortaPad.exe";
             //サービスとして設定するかどうか
             public bool SetForService = true;
+                public string ServiceDescription = "Portapadの起動を制御";
 
 
         int pagecount = 0;

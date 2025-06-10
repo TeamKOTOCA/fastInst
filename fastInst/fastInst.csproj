@@ -6,10 +6,40 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+	<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+	<ApplicationIcon>portapadinstaller.ico</ApplicationIcon>
+	<SignAssembly>False</SignAssembly>
+	<Title>PortaPad</Title>
+	<Authors>Povo43</Authors>
+	<Description>Portapadのインストーラー</Description>
+	<Copyright>© 2025 Povo43</Copyright>
+	<PackageProjectUrl>https://kotoca.net</PackageProjectUrl>
+	<PackageIcon>portapadinstaller.png</PackageIcon>
+	<ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>portable</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="portapadinstaller.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\..\Downloads\portapadinstaller.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Markdig" Version="0.41.2" />
+    <PackageReference Include="TaskScheduler" Version="2.12.1" />
   </ItemGroup>
 
 </Project>
